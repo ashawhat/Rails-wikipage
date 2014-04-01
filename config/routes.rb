@@ -1,4 +1,15 @@
 Wikipages::Application.routes.draw do
+
+match('contacts', {:via => :get, :to => 'contacts#index'})
+match('contacts/:id', { :via => :get, :to => 'contacts#show' })
+
+
+end
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +64,4 @@ Wikipages::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
